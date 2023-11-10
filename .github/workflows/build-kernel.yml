@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-kernel:
-    runs-on: buildjet-32vcpu-ubuntu-2204
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
       - name: Setup environment
@@ -32,8 +32,8 @@ jobs:
 
       - name: Build kernel
         run: |
-          export KBUILD_BUILD_USER="zclkkk"
-          export KBUILD_BUILD_HOST="workspace"
+          export KBUILD_BUILD_USER="Rad"
+          export KBUILD_BUILD_HOST="@YourWaifu"
           export PATH=$GITHUB_WORKSPACE/clang/bin:${PATH}
           args="                  ARCH=arm64 \
                                   O=../out \
